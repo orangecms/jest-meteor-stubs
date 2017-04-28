@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/orangecms/jest-meteor-stubs/issues"
   },
-  "homepage": "https://github.com/orangecms/jest-meteor-stubs#readme"
+  "homepage": "https://github.com/orangecms/jest-meteor-stubs#readme",
+  "dependencies": {
+    "jest-meteor-mocks": "^1.0.0"
+  }
 }
