@@ -28,3 +28,18 @@ your `package.json` file. Here is a short example:
     ]
   }
 ```
+
+For Meteor packages, you will need to rewrite the module names to use `_`
+instead of `:` for the namespaces as `:` is not allowed by some file/operating
+systems:
+```json
+  "jest": {
+    "moduleNameMapper": {
+      "^(.*):(.*)$": "$1_$2"
+    },
+    "modulePaths": [
+      "<rootDir>/node_modules",
+      "<rootDir>/node_modules/jest-meteor-stubs/lib"
+    ]
+  }
+```
