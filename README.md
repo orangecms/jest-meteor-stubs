@@ -17,29 +17,34 @@ to overcome this issue by providing additional locations where the load should
 look for modules.
 
 ## Usage
-Add this module's `lib/` directory to the `modulePaths` in the `jest` section of
-your `package.json` file. Here is a short example:
+Add this module's `lib/` directory to the `modulePaths` in your Jest config.
+For Meteor packages, you will need to use `moduleNameMapper` to rewrite the
+module names to use `_` instead of `:` for the namespaces as `:` is not allowed
+by some file/operating systems.
+The configuration has to be in `jest.config.js` in Jest 20 because of
+[a bug in the mapper](https://github.com/facebook/jest/issues/3716).
 
-```json
-  "jest": {
-    "modulePaths": [
-      "<rootDir>/node_modules",
-      "<rootDir>/node_modules/jest-meteor-stubs/lib"
-    ]
-  }
-```
+Here is a working example:
 
-For Meteor packages, you will need to rewrite the module names to use `_`
-instead of `:` for the namespaces as `:` is not allowed by some file/operating
-systems:
-```json
-  "jest": {
-    "moduleNameMapper": {
-      "^(.*):(.*)$": "$1_$2"
-    },
-    "modulePaths": [
-      "<rootDir>/node_modules",
-      "<rootDir>/node_modules/jest-meteor-stubs/lib"
-    ]
-  }
+```javascript
+module.exports = {
+  transform: {
+    '^.+\\.jsx?$': 'babel-jest',
+  },
+  moduleFileExtensions: [
+    'js',
+    'jsx',
+  ],
+  modulePaths: [
+    '<rootDir>/node_modules/',
+    '<rootDir>/node_modules/jest-meteor-stubs/lib/',
+  ],
+  moduleNameMapper: {
+    '^(.*):(.*)$': '$1_$2',
+  },
+  unmockedModulePathPatterns: [
+    '/^imports\\/.*\\.jsx?$/',
+    '/^node_modules/',
+  ],
+};
 ```
