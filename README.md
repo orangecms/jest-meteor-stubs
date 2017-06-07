@@ -48,3 +48,7 @@ module.exports = {
   ],
 };
 ```
+
+## Examples
+Please see [this demo](https://github.com/orangecms/jest-meteor-demo)
+for a small example. :)
