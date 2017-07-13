@@ -1,6 +1,6 @@
 {
   "name": "jest-meteor-stubs",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "Stubs for using Jest to unit test Meteor modules",
   "main": "lib/meteor/meteor.js",
   "scripts": {
