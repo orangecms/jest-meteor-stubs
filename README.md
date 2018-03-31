@@ -1,3 +1,11 @@
+# meteor-jest-stubs
+This is a supported fork of [orangecms/jest-meteor-stubs](https://github.com/orangecms/jest-meteor-stubs). Please note that, the package name is slightly different that the original one:
+
+```diff
+- jest-meteor-stubs
++ meteor-jest-stubs
+```
+
 ## About
 Testing Meteor code is very slow when using the built-in `meteor test` command.
 These stubs will help you get rid of the dependencies which are not present in
@@ -5,7 +13,7 @@ your project's `node_modules` directory. Use the setup below which does most of
 the actual magic. :)
 
 ## Installation
-`npm i -D jest-meteor-stubs` or `yarn add -D jest-meteor-stubs`
+`npm i -D meteor-jest-stubs` or `yarn add -D meteor-jest-stubs`
 
 ## How it works
 Jest preprocesses the files to be executed through the test runner. When pulling
@@ -48,7 +56,3 @@ module.exports = {
   ],
 };
 ```
-
-## Examples
-Please see [this demo](https://github.com/orangecms/jest-meteor-demo)
-for a small example. :)
