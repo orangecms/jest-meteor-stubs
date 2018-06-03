@@ -1,6 +1,6 @@
 {
   "name": "meteor-jest-stubs",
-  "version": "1.5.3",
+  "version": "1.5.4",
   "description": "Stubs for using Jest to unit test Meteor modules",
   "main": "lib/meteor/meteor.js",
   "scripts": {
@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/tomscholz/jest-meteor-stubs#readme",
   "peerDependencies": {
-    "jest-cli": "22.4.3"
+    "jest-cli": "23.1.0"
   }
 }
