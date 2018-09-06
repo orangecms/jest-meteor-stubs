@@ -1,6 +1,6 @@
 {
-  "name": "jest-meteor-stubs",
-  "version": "1.5.1",
+  "name": "meteor-jest-stubs",
+  "version": "1.6.0",
   "description": "Stubs for using Jest to unit test Meteor modules",
   "main": "lib/meteor/meteor.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/orangecms/jest-meteor-stubs.git"
+    "url": "git+ssh://git@github.com/tomscholz/jest-meteor-stubs.git"
   },
   "keywords": [
     "jest",
@@ -18,10 +18,10 @@
   "author": "Daniel Maslowski",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/orangecms/jest-meteor-stubs/issues"
+    "url": "https://github.com/tomscholz/jest-meteor-stubs/issues"
   },
-  "homepage": "https://github.com/orangecms/jest-meteor-stubs#readme",
+  "homepage": "https://github.com/tomscholz/jest-meteor-stubs#readme",
   "peerDependencies": {
-    "jest-cli": "^20.0.4"
+    "jest-cli": "23.1.0"
   }
 }

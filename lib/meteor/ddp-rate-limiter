@@ -1,0 +1,5 @@
+const DDPRateLimiter = {
+  addRule: jest.fn()
+};
+
+module.exports = { DDPRateLimiter };
